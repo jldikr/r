@@ -1,0 +1,25 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Reading the database
+data = pd.read_csv("tips.csv")
+
+# Scatter Plot
+plt.scatter(data['day'], data['tip'], c=data['size'], s=data['total_bill'])
+plt.title("Scatter plot")
+plt.xlabel('Day')
+plt.ylabel('Tip')
+plt.colorbar()
+plt.show()
+
+# Bar Chart
+plt.bar(data['day'], data['tip'])
+plt.title("Bar Chart")
+plt.xlabel('Day')
+plt.ylabel('Tip')
+plt.show()
+
+# Histogram
+plt.hist(data['total_bill'])
+plt.title("Histogram")
+plt.show()

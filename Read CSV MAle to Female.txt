@@ -1,0 +1,14 @@
+import pandas as pd
+
+
+df = pd.read_csv('train.csv')
+
+
+print(df.columns)
+
+
+print(df['Sex'].value_counts())
+
+
+print(df['Sex'].value_counts(normalize=True))
+

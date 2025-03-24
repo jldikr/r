@@ -1,0 +1,14 @@
+import pandas as pd
+
+
+df = pd.read_csv('train.csv')
+
+
+print(df.columns)
+
+
+print(df[df[“Survived”] == 1][‘Sex’].value_counts())
+
+
+passengers print(df[df[“Survived”] == 1][‘Sex’].value_counts(normalize=True))
+

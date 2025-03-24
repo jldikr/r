@@ -1,0 +1,8 @@
+import pandas as pd
+
+df = pd.read_csv(‘train.csv’)
+
+median_age_men=df[df[‘Sex’]==’male’][‘Age’].median()
+median_age_women=df[df[‘Sex’]==’female’][‘Age’].median()
+print(f”The median age of men is {median_age_men}”)
+print(f”The median age of women is {median_age_women}”)
